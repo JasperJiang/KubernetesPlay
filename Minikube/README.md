@@ -32,6 +32,12 @@ You can change the VM driver by adding the --driver=<enter_driver_name> flag to 
 minikube start
 ```
 
+## check MiniKube Status
+
+```bash
+minikube status
+```
+
 ## Use Local Docker Images with MiniKube
 
 ```bash
@@ -39,4 +45,10 @@ eval $(minikube docker-env)
 
 #undo it
 eval "$(docker-machine env -u)"
+```
+
+## Move docker image to minikube
+
+```bash
+docker save "${1}" | pv | (eval $(minikube docker-env) && docker load)
 ```
