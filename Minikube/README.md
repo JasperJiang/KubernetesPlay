@@ -38,6 +38,12 @@ minikube start --mount-string="$HOME/go/src/github.com/nginx:/data"
 minikube status
 ```
 
+## ssh to MiniKube
+
+```bash
+minikube ssh
+```
+
 ## Use Local Docker Images with MiniKube
 
 ```bash
