@@ -29,7 +29,7 @@ You can change the VM driver by adding the --driver=<enter_driver_name> flag to 
 ## Start MiniKube
 
 ```bash
-minikube start
+minikube start --mount-string="$HOME/go/src/github.com/nginx:/data"
 ```
 
 ## check MiniKube Status
